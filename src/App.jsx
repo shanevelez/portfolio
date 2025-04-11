@@ -61,7 +61,7 @@ function App() {
   </a>
   <span>|</span>
   <a
-    href="https://github.com/your-github-username/your-portfolio-repo"
+    href="https://github.com/shanevelez/portfolio"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-sky-400 transition"
