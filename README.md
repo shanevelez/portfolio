@@ -32,9 +32,3 @@ Fully mobile-responsive
 
 Built entirely from scratch
 
-📫 Contact
-Want to get in touch or see project demos?
-
-📧 Message me via the contact form
-🔗 Connect on LinkedIn
-👨‍💻 See this site’s code
