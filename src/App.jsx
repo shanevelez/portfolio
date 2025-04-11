@@ -50,7 +50,7 @@ function App() {
       >
         <ContactForm />
       </section>
-    <footer className="mt-12 text-center text-sm text-slate-500 pb-6">
+<footer className="mt-12 text-center text-sm text-slate-500 pb-6 space-x-4">
   <a
     href="https://www.linkedin.com/in/shane-velez-3096926a/"
     target="_blank"
@@ -58,6 +58,15 @@ function App() {
     className="hover:text-sky-400 transition"
   >
     Connect with me on LinkedIn
+  </a>
+  <span>|</span>
+  <a
+    href="https://github.com/your-github-username/your-portfolio-repo"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-sky-400 transition"
+  >
+    View source on GitHub
   </a>
 </footer>
 
