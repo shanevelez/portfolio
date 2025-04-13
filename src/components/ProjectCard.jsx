@@ -12,14 +12,23 @@ const categoryGradients = {
 
 const categoryOverlayOpacity = {
   "Case & Workflow Management": "opacity-40",
-  "HR & People Ops": "opacity-20",
+  "HR & People Ops": "opacity-40",
   "Reporting & Analytics": "opacity-40",
-  "Internal Tools & Self-Service": "opacity-35",
+  "Internal Tools & Self-Service": "opacity-50",
   "Intake & Forms Automation": "opacity-40",
-  "Compliance & Escalation": "opacity-25",
+  "Compliance & Escalation": "opacity-30",
   "Default": "opacity-40",
 };
 
+const categoryOverlayFilter = {
+  "Case & Workflow Management": "contrast(100%) brightness(120%)",
+  "HR & People Ops": "contrast(85%) brightness(170%)",
+  "Reporting & Analytics": "contrast(100%) brightness(100%)",
+  "Internal Tools & Self-Service": "contrast(100%) brightness(130%)",
+  "Intake & Forms Automation": "contrast(90%) brightness(120%)",
+  "Compliance & Escalation": "contrast(90%) brightness(180%)",
+  "Default": "contrast(130%) brightness(90%)",
+};
 
 const categoryIcons = {
   "Case & Workflow Management": "📁",
@@ -36,6 +45,7 @@ const ProjectCard = ({ title, category }) => {
   const icon = categoryIcons[category] || categoryIcons["Default"];
   const fontSize = title.length > 50 ? 'text-sm' : 'text-lg';
   const overlayOpacity = categoryOverlayOpacity[category] || categoryOverlayOpacity["Default"];
+  const overlayFilter = categoryOverlayFilter[category] || categoryOverlayFilter["Default"];
 
   return (
     <div className={`relative cursor-pointer p-6 w-48 sm:w-64 h-48 sm:h-64 flex-shrink-0 ${gradient} rounded-2xl shadow-md shadow-black/10 hover:shadow-lg hover:scale-105 transition-all duration-300 transform flex flex-col justify-between overflow-hidden`}>
@@ -46,7 +56,7 @@ const ProjectCard = ({ title, category }) => {
   alt=""
   className={`absolute inset-0 w-full h-full object-cover pointer-events-none z-10 ${overlayOpacity}`}
   style={{
-    filter: 'contrast(100%) brightness(100%)',
+    filter: overlayFilter,
   }}
 />
 <div className="absolute inset-0 rounded-2xl border-2 border-white/10 pointer-events-none z-15" />
