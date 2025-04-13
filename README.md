@@ -1,12 +1,15 @@
 🧑‍💻 Shane Velez – Developer Portfolio
+
 A portfolio of internal tools and automation projects built in React + Tailwind, showcasing real-world solutions I’ve developed for a 1000+ student school using low-code, Python, and Power Platform.
 
 I had no experience with React or Tailwind three days before I built this site — this portfolio is proof I can pick up any stack.
 
-🚀 Live Site
-👉 View Portfolio on Vercel
+
+🚀 Live Site - www.shanevelez.com
+
 
 🛠️ Technologies
+
 React (Vite)
 
 TailwindCSS
@@ -20,6 +23,7 @@ Mobile-Responsive Design
 GitHub Pages/Vercel deployment
 
 📂 Project Features
+
 Scrollable project cards w/ category filters
 
 Expandable modal w/ project details

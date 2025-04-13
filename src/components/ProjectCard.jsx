@@ -10,6 +10,17 @@ const categoryGradients = {
   "Default": "bg-gradient-to-br from-slate-700 to-slate-800",
 };
 
+const categoryOverlayOpacity = {
+  "Case & Workflow Management": "opacity-50",
+  "HR & People Ops": "opacity-100",
+  "Reporting & Analytics": "opacity-25",
+  "Internal Tools & Self-Service": "opacity-35",
+  "Intake & Forms Automation": "opacity-70",
+  "Compliance & Escalation": "opacity-70",
+  "Default": "opacity-40",
+};
+
+
 const categoryIcons = {
   "Case & Workflow Management": "📁",
   "HR & People Ops": "👥",
@@ -24,16 +35,17 @@ const ProjectCard = ({ title, category }) => {
   const gradient = categoryGradients[category] || categoryGradients["Default"];
   const icon = categoryIcons[category] || categoryIcons["Default"];
   const fontSize = title.length > 50 ? 'text-sm' : 'text-lg';
+  const overlayOpacity = categoryOverlayOpacity[category] || categoryOverlayOpacity["Default"];
 
   return (
     <div className={`relative cursor-pointer p-6 w-48 sm:w-64 h-48 sm:h-64 flex-shrink-0 ${gradient} rounded-2xl shadow-md shadow-black/10 hover:shadow-lg hover:scale-105 transition-all duration-300 transform flex flex-col justify-between overflow-hidden`}>
   
   {/* Textured SVG Overlay */}
   <img
-    src={cardBg}
-    alt=""
-    className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay pointer-events-none z-10"
-  />
+  src={cardBg}
+  alt=""
+  className={`absolute inset-0 w-full h-full object-cover ${overlayOpacity} mix-blend-overlay pointer-events-none z-10`}
+/>
 <div className="absolute inset-0 rounded-2xl border-2 border-white/10 pointer-events-none z-15" />
   {/* Content */}
   <div className="relative z-20 text-white flex flex-col justify-between h-full">

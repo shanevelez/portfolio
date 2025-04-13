@@ -1,24 +1,5 @@
 const projects = [
-  {
-    "Project": "School Trips & Compliance Management",
-    "Apps": [
-      "Trip Request Form",
-      "Trip Final Checklist Submission",
-      "Trip Risk Assessment Submission"
-    ],
-    "Flows": [
-      "Submit Trip Request and Multi-Stage Stakeholder Approval",
-      "Review and Approve Trip Risk Assessment Documents",
-      "Send Trip Final Checklist Reminder on Day of Trip",
-      "Save and Share Submitted Trip Insurance Documents"
-    ],
-    "Features": "End-to-end digital workflow for school trip approvals involving multi-stage sign-off from line manager, cover manager, and SLT. Staff complete risk assessments and pre-trip checklists directly in the app. Automated flows route submissions to the relevant approvers, ensuring compliance with policy. Eliminates delays, paper forms, and email chasing by consolidating everything into a single, auditable workflow.",
-    "Planned Features": null,
-    "Impact": "Replaced a 4\u20135 step manual workflow with a fully automated system. Estimated 1.5\u20132 hours saved per trip across staff and admin teams. Improves visibility, reduces delays, and ensures risk documentation is always complete and accessible.",
-    "Business Use Case": "Internal Request & Compliance Workflow",
-    "Category": "Case & Workflow Management"
-  },
-  {
+    {
     "Project": "Employee Performance & Review Dashboard",
     "Apps": [
       "Teacher PMR Dashboard"
@@ -66,6 +47,20 @@ const projects = [
     "Category": "HR & People Ops"
   },
   {
+    "Project": "Internal Requisitions",
+    "Apps": [
+      "IRO"
+    ],
+    "Flows": [
+      "Utilise Office Scripts to Dynamically Populate an IRO Excel Template, Generates an Approval to the Budget Holder and Sends to Finance Team Once Approved"
+    ],
+    "Features": "A streamlined digital system for internal order placements and approvals. Staff can submit requisitions for office supplies or equipment, selecting the relevant budget holder directly within the app. The designated budget holder receives an approval request, which they can approve or reject. Once approved, the system automatically generates a branded order form, which is sent to the finance department for further processing. Users can also track the status of previous orders, providing visibility into their request history. This system eliminates manual email chains, paper forms, and ensures that all requisitions are properly tracked and documented.",
+    "Planned Features": "Direct integration with budgeting software. Finance can get a live view of department budget before processing IRO",
+    "Impact": "Standardises procurement by replacing unstructured email requests with a consistent, trackable workflow. Budget holders and finance staff no longer waste time chasing missing info or approvals\u2014saving 15\u201330 minutes per request and improving audit readiness.",
+    "Business Use Case": "Internal Procurement & Budget Approval",
+    "Category": "Internal Tools & Self-Service"
+  },
+  {
     "Project": "Employee Leave Management",
     "Apps": [
       "Leave of Absence"
@@ -78,6 +73,32 @@ const projects = [
     "Planned Features": "Direct API integration. Currently, when leave is approved, cover manager sent email with details to manually enter into school MIS. Working on API integration",
     "Impact": "Automates the entire leave request and approval process. Staff have immediate visibility of their leave balances, and managers receive streamlined requests that include all necessary information. Eliminates paper forms, manual data entry, and follow-up emails\u2014saving 15\u201330 minutes per request, improving compliance, and reducing administrative load for HR and management.",
     "Business Use Case": "HR Automation & Employee Services",
+    "Category": "HR & People Ops"
+  },
+  {
+    "Project": "External Educator & Timesheet Management",
+    "Apps": [
+      "Music Lesson Tracking"
+    ],
+    "Flows": [
+      "Collate Music Lesson Data and Generate Monthly Timesheets"
+    ],
+    "Features": "A digital attendance and timesheet tracking system for external music teachers. Teachers select their instrument (drums, guitar, piano, singing) from a dropdown, and the system automatically displays a list of students signed up for lessons in that instrument. Teachers can mark students as present, late, or absent using tick boxes. The system tracks attendance and generates timesheets for each external teacher, simplifying payroll and administrative processes.",
+    "Planned Features": null,
+    "Impact": "Enables external music teachers to log attendance and generate timesheets via a simple app\u2014without needing school accounts. Replaces paper registers and manual submissions, improving accuracy and saving 10\u201315 minutes per session per teacher. Centralises attendance records for safeguarding and streamlines payment workflows.",
+    "Business Use Case": "Per-User Scheduling",
+    "Category": "Internal Tools & Self-Service"
+  },
+  {
+    "Project": "Employee Onboarding & Policy Management",
+    "Apps": [],
+    "Flows": [
+      "Generate Signed Policies From Word Template and Store in Digital Personnel File"
+    ],
+    "Features": "An automated onboarding package used annually for all staff. The system allows staff to complete a digital form listing updated staff policies, where they tick boxes to confirm they have read and agreed to them. The system automatically places the signed policies in the staff member's digital personnel file, and creates a new folder for new staff members. This solution replaces manual tracking, paper forms, and the need for HR to create folders for each individual.",
+    "Planned Features": "Automatic deletion of files for leavers according to data retention policies",
+    "Impact": "Automates annual onboarding and policy acknowledgment for ~120 staff. Staff complete a single form confirming agreement, and signed policies are stored automatically in personnel files. Eliminates paper handling and manual archiving\u2014saving several hours at the start of each year while ensuring airtight compliance.",
+    "Business Use Case": "Onboarding, Policy Acknowledgement & HR Audit",
     "Category": "HR & People Ops"
   },
   {
@@ -111,20 +132,7 @@ const projects = [
     "Business Use Case": "Assessment Monitoring & Data Integrity",
     "Category": "Reporting & Analytics"
   },
-  {
-    "Project": "Internal Requisitions",
-    "Apps": [
-      "IRO"
-    ],
-    "Flows": [
-      "Utilise Office Scripts to Dynamically Populate an IRO Excel Template, Generates an Approval to the Budget Holder and Sends to Finance Team Once Approved"
-    ],
-    "Features": "A streamlined digital system for internal order placements and approvals. Staff can submit requisitions for office supplies or equipment, selecting the relevant budget holder directly within the app. The designated budget holder receives an approval request, which they can approve or reject. Once approved, the system automatically generates a branded order form, which is sent to the finance department for further processing. Users can also track the status of previous orders, providing visibility into their request history. This system eliminates manual email chains, paper forms, and ensures that all requisitions are properly tracked and documented.",
-    "Planned Features": "Direct integration with budgeting software. Finance can get a live view of department budget before processing IRO",
-    "Impact": "Standardises procurement by replacing unstructured email requests with a consistent, trackable workflow. Budget holders and finance staff no longer waste time chasing missing info or approvals\u2014saving 15\u201330 minutes per request and improving audit readiness.",
-    "Business Use Case": "Internal Procurement & Budget Approval",
-    "Category": "Internal Tools & Self-Service"
-  },
+  
   {
     "Project": "Behaviour & Intervention Tracking System",
     "Apps": [
@@ -139,6 +147,25 @@ const projects = [
     "Planned Features": null,
     "Impact": "Streamlines ARC placement from referral to communication. Automatically notifies teachers (~6 per student) to set tailored work, emails parents with placement reason, and generates exit letters filed in the student record. Replaces hours of manual coordination, follow-up, and documentation per student\u2014saving up to 30\u201360 minutes per placement while ensuring nothing is missed.",
     "Business Use Case": "Multi-Stage Case Management & Reviews",
+    "Category": "Case & Workflow Management"
+  },
+  {
+    "Project": "School Trips & Compliance Management",
+    "Apps": [
+      "Trip Request Form",
+      "Trip Final Checklist Submission",
+      "Trip Risk Assessment Submission"
+    ],
+    "Flows": [
+      "Submit Trip Request and Multi-Stage Stakeholder Approval",
+      "Review and Approve Trip Risk Assessment Documents",
+      "Send Trip Final Checklist Reminder on Day of Trip",
+      "Save and Share Submitted Trip Insurance Documents"
+    ],
+    "Features": "End-to-end digital workflow for school trip approvals involving multi-stage sign-off from line manager, cover manager, and SLT. Staff complete risk assessments and pre-trip checklists directly in the app. Automated flows route submissions to the relevant approvers, ensuring compliance with policy. Eliminates delays, paper forms, and email chasing by consolidating everything into a single, auditable workflow.",
+    "Planned Features": null,
+    "Impact": "Replaced a 4\u20135 step manual workflow with a fully automated system. Estimated 1.5\u20132 hours saved per trip across staff and admin teams. Improves visibility, reduces delays, and ensures risk documentation is always complete and accessible.",
+    "Business Use Case": "Internal Request & Compliance Workflow",
     "Category": "Case & Workflow Management"
   },
   {
@@ -195,32 +222,8 @@ const projects = [
     "Business Use Case": "Application Management & Admin Support",
     "Category": "Intake & Forms Automation"
   },
-  {
-    "Project": "Employee Onboarding & Policy Management",
-    "Apps": [],
-    "Flows": [
-      "Generate Signed Policies From Word Template and Store in Digital Personnel File"
-    ],
-    "Features": "An automated onboarding package used annually for all staff. The system allows staff to complete a digital form listing updated staff policies, where they tick boxes to confirm they have read and agreed to them. The system automatically places the signed policies in the staff member's digital personnel file, and creates a new folder for new staff members. This solution replaces manual tracking, paper forms, and the need for HR to create folders for each individual.",
-    "Planned Features": "Automatic deletion of files for leavers according to data retention policies",
-    "Impact": "Automates annual onboarding and policy acknowledgment for ~120 staff. Staff complete a single form confirming agreement, and signed policies are stored automatically in personnel files. Eliminates paper handling and manual archiving\u2014saving several hours at the start of each year while ensuring airtight compliance.",
-    "Business Use Case": "Onboarding, Policy Acknowledgement & HR Audit",
-    "Category": "HR & People Ops"
-  },
-  {
-    "Project": "External Educator & Timesheet Management",
-    "Apps": [
-      "Music Lesson Tracking"
-    ],
-    "Flows": [
-      "Collate Music Lesson Data and Generate Monthly Timesheets"
-    ],
-    "Features": "A digital attendance and timesheet tracking system for external music teachers. Teachers select their instrument (drums, guitar, piano, singing) from a dropdown, and the system automatically displays a list of students signed up for lessons in that instrument. Teachers can mark students as present, late, or absent using tick boxes. The system tracks attendance and generates timesheets for each external teacher, simplifying payroll and administrative processes.",
-    "Planned Features": null,
-    "Impact": "Enables external music teachers to log attendance and generate timesheets via a simple app\u2014without needing school accounts. Replaces paper registers and manual submissions, improving accuracy and saving 10\u201315 minutes per session per teacher. Centralises attendance records for safeguarding and streamlines payment workflows.",
-    "Business Use Case": "Per-User Scheduling",
-    "Category": "Internal Tools & Self-Service"
-  },
+  
+  
   {
     "Project": "GCSE Options Management",
     "Apps": [
