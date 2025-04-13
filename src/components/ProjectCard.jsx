@@ -12,11 +12,11 @@ const categoryGradients = {
 
 const categoryOverlayOpacity = {
   "Case & Workflow Management": "opacity-40",
-  "HR & People Ops": "opacity-40",
-  "Reporting & Analytics": "opacity-40",
-  "Internal Tools & Self-Service": "opacity-50",
-  "Intake & Forms Automation": "opacity-40",
-  "Compliance & Escalation": "opacity-30",
+  "HR & People Ops": "opacity-30",
+  "Reporting & Analytics": "opacity-35",
+  "Internal Tools & Self-Service": "opacity-25",
+  "Intake & Forms Automation": "opacity-35",
+  "Compliance & Escalation": "opacity-25",
   "Default": "opacity-40",
 };
 
