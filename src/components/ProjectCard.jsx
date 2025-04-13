@@ -12,11 +12,11 @@ const categoryGradients = {
 
 const categoryOverlayOpacity = {
   "Case & Workflow Management": "opacity-40",
-  "HR & People Ops": "opacity-30",
+  "HR & People Ops": "opacity-20",
   "Reporting & Analytics": "opacity-40",
   "Internal Tools & Self-Service": "opacity-35",
   "Intake & Forms Automation": "opacity-40",
-  "Compliance & Escalation": "opacity-40",
+  "Compliance & Escalation": "opacity-25",
   "Default": "opacity-40",
 };
 
@@ -46,7 +46,7 @@ const ProjectCard = ({ title, category }) => {
   alt=""
   className={`absolute inset-0 w-full h-full object-cover pointer-events-none z-10 ${overlayOpacity}`}
   style={{
-    filter: 'contrast(130%) brightness(85%)',
+    filter: 'contrast(100%) brightness(100%)',
   }}
 />
 <div className="absolute inset-0 rounded-2xl border-2 border-white/10 pointer-events-none z-15" />
