@@ -1,5 +1,6 @@
 import cardBg from '../media/cardbg.svg'; 
 
+
 const categoryGradients = {
   "Case & Workflow Management": "bg-gradient-to-br from-indigo-700 to-indigo-500",
   "HR & People Ops": "bg-gradient-to-br from-rose-600 to-pink-500",
@@ -46,6 +47,7 @@ const ProjectCard = ({ title, category }) => {
   const fontSize = title.length > 50 ? 'text-sm' : 'text-lg';
   const overlayOpacity = categoryOverlayOpacity[category] || categoryOverlayOpacity["Default"];
   const overlayFilter = categoryOverlayFilter[category] || categoryOverlayFilter["Default"];
+  
 
   return (
     <div className={`relative cursor-pointer p-6 w-48 sm:w-64 h-48 sm:h-64 flex-shrink-0 ${gradient} rounded-2xl shadow-md shadow-black/10 hover:shadow-lg hover:scale-105 transition-all duration-300 transform flex flex-col justify-between overflow-hidden`}>
@@ -56,6 +58,7 @@ const ProjectCard = ({ title, category }) => {
   alt=""
   className={`absolute inset-0 w-full h-full object-cover pointer-events-none z-10 ${overlayOpacity}`}
   style={{
+	
     filter: overlayFilter,
   }}
 />
