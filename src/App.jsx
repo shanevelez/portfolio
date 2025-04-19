@@ -13,7 +13,9 @@ function App() {
   
       <header className="text-center pt-6 px-4">
         <h1 className="text-5xl font-bold mb-4">Shane Velez</h1>
-        <p className="mb-8 max-w-xl mx-auto">
+        <h2 className="text-3xl font-medium text-sky-300 mb-4">Head of Data & Management Information Systems</h2>
+
+		<p className="mb-8 max-w-xl mx-auto">
           Self-taught, tech-agnostic, and relentlessly resourceful. I built this portfolio in React + Tailwind to show I can pick up any tech.
         </p>
       </header>
