@@ -11,6 +11,7 @@ function App() {
     
 	const [contactRef, contactVisible] = useInView(0.2);
 		return (
+		<>
     <div className="min-h-screen w-screen overflow-x-hidden bg-slate-900 pb-5 text-white">
   
       <header className="text-center pt-6 px-4">
