@@ -75,6 +75,7 @@ function App() {
 </footer>
 
 	</div>
+	<Analytics/>
   );
 }
 
