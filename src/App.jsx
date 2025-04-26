@@ -4,6 +4,8 @@ import About from './components/About';
 import ContactForm from './components/ContactForm';
 import { useEffect } from 'react';
 import useInView from './hooks/useInView';
+import { Analytics } from "@vercel/analytics/react"
+
 
 function App() {
     
