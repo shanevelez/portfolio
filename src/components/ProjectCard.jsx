@@ -52,9 +52,10 @@ const ProjectCard = ({ title, category }) => {
   return (
     <div   onClick={() => {
   if (typeof umami === 'object' && typeof umami.track === 'function') {
-    umami.track('Clicked Project', { name: title });
+    umami.track(`Clicked ${title}`);
   }
 }}
+
 
   className={`relative cursor-pointer p-6 w-48 sm:w-64 h-48 sm:h-64 flex-shrink-0 ${gradient} rounded-2xl shadow-md shadow-black/10 hover:shadow-lg hover:scale-105 transition-all duration-300 transform flex flex-col justify-between overflow-hidden`}>
   
