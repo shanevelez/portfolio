@@ -50,7 +50,12 @@ const ProjectCard = ({ title, category }) => {
   
 
   return (
-    <div className={`relative cursor-pointer p-6 w-48 sm:w-64 h-48 sm:h-64 flex-shrink-0 ${gradient} rounded-2xl shadow-md shadow-black/10 hover:shadow-lg hover:scale-105 transition-all duration-300 transform flex flex-col justify-between overflow-hidden`}>
+    <div   onClick={() => {
+    if (window.umami) {
+      window.umami(`Clicked Project: ${title}`);
+    }
+  }}
+  className={`relative cursor-pointer p-6 w-48 sm:w-64 h-48 sm:h-64 flex-shrink-0 ${gradient} rounded-2xl shadow-md shadow-black/10 hover:shadow-lg hover:scale-105 transition-all duration-300 transform flex flex-col justify-between overflow-hidden`}>
   
   {/* Textured SVG Overlay */}
   <img
