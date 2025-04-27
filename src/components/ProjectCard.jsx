@@ -52,8 +52,8 @@ const ProjectCard = ({ title, category }) => {
   return (
     <div   onClick={() => {
   if (typeof umami === 'object' && typeof umami.track === 'function') {
-    umami.track(`Clicked ${project.Project}`);
-
+    const safeTitle = title.length > 50 ? title.slice(0, 50) : title;
+    umami.track(safeTitle);
   }
 }}
 
