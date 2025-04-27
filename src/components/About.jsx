@@ -26,7 +26,12 @@ const About = () => {
         {!expanded ? (
           <>
             <button
-              onClick={() => setExpanded(true)}
+               onClick={() => {
+    if (window.umami) {
+      window.umami('Clicked About Read More');
+    }
+    setExpanded(true);
+  }}
               className="text-sky-400 hover:text-sky-300 text-sm font-medium transition"
             >
               Read more →
