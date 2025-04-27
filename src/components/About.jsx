@@ -27,11 +27,12 @@ const About = () => {
           <>
             <button
                onClick={() => {
-    if (window.umami) {
-      window.umami('Clicked About Read More');
-    }
-    setExpanded(true);
-  }}
+  if (typeof umami === 'object' && typeof umami.track === 'function') {
+    umami.track('Clicked About Read More');
+  }
+  setExpanded(true);
+}}
+
               className="text-sky-400 hover:text-sky-300 text-sm font-medium transition"
             >
               Read more →
