@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import aboutMePhoto from '../media/aboutme.jpg';
+import CvModal from './CvModal';
 
 const About = () => {
   const [expanded, setExpanded] = useState(false);
-
+const [showCv, setShowCv] = useState(false);
   return (
     <div className="flex flex-col md:flex-row items-center md:items-start gap-8 px-6 max-w-6xl mx-auto">
       {/* Photo */}
@@ -23,22 +24,34 @@ const About = () => {
           I didn’t start out in tech — I started by solving problems. I’ve always had an instinct for how technology works, and an ability to pick up new tools quickly. This portfolio is meant to serve as proof of concept. I’d never heard of React or Tailwind before building it, but a bit of research told me they were the best tools for the job.
         </p>
 
-        {!expanded ? (
-          <>
-            <button
-               onClick={() => {
-  if (typeof umami === 'object' && typeof umami.track === 'function') {
-    umami.track('Clicked About Read More');
-  }
-  setExpanded(true);
-}}
+{!expanded ? (
+  <div className="flex gap-4">
+    <button
+      onClick={() => {
+        if (typeof umami === 'object' && typeof umami.track === 'function') {
+          umami.track('Clicked About Read More');
+        }
+        setExpanded(true);
+      }}
+      className="text-sky-400 hover:text-sky-300 text-sm font-medium transition"
+    >
+      Read more →
+    </button>
 
-              className="text-sky-400 hover:text-sky-300 text-sm font-medium transition"
-            >
-              Read more →
-            </button>
-          </>
-        ) : (
+    <button
+      onClick={() => {
+        if (typeof umami === 'object' && typeof umami.track === 'function') {
+          umami.track('Clicked View CV');
+        }
+        setShowCv(true);
+      }}
+      className="text-sky-400 hover:text-sky-300 text-sm font-medium transition"
+    >
+      View CV
+    </button>
+  </div>
+) : (
+
           <>
             <p className="text-sm leading-relaxed mb-4">
               When I joined a school as Administrator for Senior Leadership, my role had nothing to do with automation or development. On my first day, I was given a desk, some quiet admin tasks and a filing cabinet full of paper leave request forms. I wasn’t busy. But I noticed how much time and effort went into basic processes around the school. So I started thinking about how they could work better.
@@ -68,17 +81,33 @@ const About = () => {
               <p>⏳ Thousands of hours of admin time saved</p>
             </div>
 
-            <button
-              onClick={() => setExpanded(false)}
-              className="mt-4 text-sky-400 hover:text-sky-300 text-sm font-medium transition"
-            >
-              Show less ↑
-            </button>
+     <div className="flex gap-4 mt-4">
+  <button
+    onClick={() => setExpanded(false)}
+    className="text-sky-400 hover:text-sky-300 text-sm font-medium transition"
+  >
+    Show less ↑
+  </button>
+
+  <button
+    onClick={() => {
+      if (typeof umami === 'object' && typeof umami.track === 'function') {
+        umami.track('Clicked View CV');
+      }
+      setShowCv(true);
+    }}
+    className="text-sky-400 hover:text-sky-300 text-sm font-medium transition"
+  >
+    View CV
+  </button>
+</div>
           </>
         )}
       </div>
-    </div>
-  );
+ {showCv && <CvModal onClose={() => setShowCv(false)} />}
+   
+   </div>
+ );
 };
 
 export default About;
