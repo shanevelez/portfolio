@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import aboutMePhoto from '../media/aboutme.jpg';
-import CvModal from './CvModal';
+import CvModal from './CVModal';
 
 const About = () => {
   const [expanded, setExpanded] = useState(false);
