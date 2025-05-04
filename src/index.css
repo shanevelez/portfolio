@@ -12,6 +12,10 @@
   }
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .animate-fade-in {
   animation: fadeInScale 0.3s ease-out forwards;
 }
