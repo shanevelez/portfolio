@@ -76,7 +76,7 @@ const [showCv, setShowCv] = useState(false);
             </p>
 
             <div className="mt-6 text-sm text-slate-400">
-              <p>📅 5+ years building internal tools</p>
+              <p>📅 6+ years building internal tools</p>
               <p>🧩 50+ systems and automations deployed</p>
               <p>⏳ Thousands of hours of admin time saved</p>
             </div>
