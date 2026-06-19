@@ -63,8 +63,8 @@ const PizzaCalculator = () => {
           <div className="flex items-center space-x-4">
             <input 
               type="range" 
-              min="60" 
-              max="75" 
+              min="50" 
+              max="90" 
               step="0.5"
               value={hydration} 
               onChange={(e) => setHydration(Number(e.target.value))} 
