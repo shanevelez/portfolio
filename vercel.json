@@ -5,5 +5,11 @@
       "destination": "https://youtu.be/Bbg6qUjY_Gk",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
