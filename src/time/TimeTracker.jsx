@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import {
-  consumeSessionFromUrl,
   deleteRows,
   getCurrentUser,
   insertRow,
   isSupabaseConfigured,
   selectRows,
-  sendMagicLink,
+  signInWithPassword,
   signOut,
   updateRows,
   upsertRow,
@@ -143,18 +142,18 @@ function SecondaryButton({ className = '', ...props }) {
 
 function Login() {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState('')
+  const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
 
   async function submit(event) {
     event.preventDefault()
     setError('')
-    setStatus('')
     setBusy(true)
+
     try {
-      await sendMagicLink(email.trim())
-      setStatus('Sign-in link sent. Open it from your email to enter the tracker.')
+      await signInWithPassword(email.trim(), password)
+      window.location.reload()
     } catch (err) {
       setError(err.message)
     } finally {
@@ -168,14 +167,35 @@ function Login() {
         <div className="mb-7">
           <a href="/" className="text-sm text-sky-400 hover:text-sky-300">← shanevelez.com</a>
           <h1 className="mt-5 text-3xl font-black tracking-tight">Time Tracker</h1>
-          <p className="mt-2 text-sm leading-6 text-slate-400">Private billing workspace. Sign in using your email link.</p>
+          <p className="mt-2 text-sm leading-6 text-slate-400">Private billing workspace.</p>
         </div>
+
         <form onSubmit={submit} className="space-y-4">
           <Field label="Email">
-            <TextInput type="email" required autoComplete="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <TextInput
+              type="email"
+              required
+              autoComplete="email"
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </Field>
-          <PrimaryButton className="w-full" disabled={busy}>{busy ? 'Sending…' : 'Email me a sign-in link'}</PrimaryButton>
-          {status && <Alert type="success">{status}</Alert>}
+
+          <Field label="Password">
+            <TextInput
+              type="password"
+              required
+              autoComplete="current-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Field>
+
+          <PrimaryButton className="w-full" disabled={busy}>
+            {busy ? 'Signing in…' : 'Sign in'}
+          </PrimaryButton>
+
           {error && <Alert type="error">{error}</Alert>}
         </form>
       </div>
@@ -739,7 +759,6 @@ export default function TimeTracker() {
         setAuthState({ loading: false, user: null })
         return
       }
-      consumeSessionFromUrl()
       const user = await getCurrentUser()
       setAuthState({ loading: false, user })
     }
