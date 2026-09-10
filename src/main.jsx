@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App.jsx'
 import PizzaCalculator from './Pizza.jsx'
+import TimeTracker from './time/TimeTracker.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         
         {/* Your new pizza calculator page */}
         <Route path="/pizza" element={<PizzaCalculator />} />
+        <Route path="/time" element={<TimeTracker />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
